@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Name genarator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="container mt-3">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">Single Profile</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Multiple Profile</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6 m-auto">
+                                    <h5 class="card-title">Select gender to generate random signle profile:</h5>
+                                    <select class="form-select mb-3" id="select-gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-primary m-auto d-block px-5"
+                                        onclick="singleProfile()">Generate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card m-3" id="single-profile" style="display:none">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6 m-auto">
+                                    <h5 class="card-title">Select number of random profile:</h5>
+                                    <select class="form-select mb-3" id="multiple-select-count">
+                                        <option value="10">10 Profiles</option>
+                                        <option value="25">25 Profiles</option>
+                                        <option value="50">50 Profiles</option>
+                                    </select>
+                                    <h5 class="card-title">Select gender:</h5>
+                                    <select class="form-select mb-3" id="multiple-select-gender">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-primary m-auto d-block px-5"
+                                        onclick="multipleProfile()">Generate</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-3" style="display:block">
+                            <div class="row row-cols-1 row-cols-md-2 g-4" id="multiple-profiles">
+
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
